@@ -144,7 +144,33 @@ export type EnumItem = {
     label: string;
     disabled?: boolean;
 };
-````
+```
+#### GetOptionsConfig 类型定义
+
+```typescript
+/**
+ * 传给 getOptions 方法的配置项，能够传入labelKey、valueKey、excludeDisabled以及其他任意的属性，方便直接透传给Select组件使用
+ */
+export type GetOptionsConfig = {
+  /**
+   * 选项的 label 键名
+   * @default 'label'
+   */
+  labelKey?: string
+  /**
+   * 选项的 value 键名
+   * @default 'value'
+   */
+  valueKey?: string
+  /**
+   * 是否过滤禁用的选项，如果为true返回的options中disabled设置为true的选项会被过滤
+   * @default false
+   */
+  excludeDisabled?: boolean
+} & {
+  [key in string]: any
+}
+```
 
 ## 注意事项
 

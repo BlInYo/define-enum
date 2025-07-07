@@ -1,7 +1,7 @@
 {
   "name": "define-enum",
   "description": "A utility function to define enum-like objects with TypeScript support.一个帮助定义枚举的工具函数",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "author": {
     "name": "BlInYo"

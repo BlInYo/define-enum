@@ -100,13 +100,3 @@ export const defineEnum = <const T extends EnumItems>(enumItems: T): DefineEnumR
 
   return enumMap as DefineEnumResult<T>
 }
-const TestStatus = defineEnum([
-  { key: 'UNKNOWN', value: 0, label: '未知', disabled: true },
-  { key: 'PASS', value: 1, label: '通过' },
-  { key: 'FAIL', value: 2, label: '失败' },
-])
-
-console.log(TestStatus.keys()) // 输出: ['UNKNOWN', 'PASS', 'FAIL']
-console.log(TestStatus.values()) // 输出: [0, 1, 2]
-console.log(TestStatus.entries())
-console.log(TestStatus.getOptions({ excludeDisabled: true }))
